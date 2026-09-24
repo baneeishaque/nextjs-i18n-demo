@@ -1,0 +1,22 @@
+{
+  // Shared markdownlint rule set (used by both the CLI and the VS Code extension).
+  "default": true,
+  // MD013: Industrial standard is 120 chars; code blocks and tables are exempt
+  // because wrapping them changes their meaning.
+  "MD013": { "line_length": 120, "code_blocks": false, "tables": false },
+  // MD024: repeated headings are allowed in different sections (e.g. "Files"
+  // under every commit in a preview document) but not within one section.
+  "MD024": { "siblings_only": true },
+  // MD033: layout elements used by industrial markdown (centered badges,
+  // collapsible details, embedded video) are allow-listed explicitly.
+  "MD033": {
+    "allowed_elements": ["div", "br", "img", "a", "details", "summary", "span", "iframe"],
+  },
+  // MD035: horizontal rules must be `***` (Industrial Standard).
+  "MD035": { "style": "***" },
+  // MD060: table pipe alignment is not enforced. Markdown is excluded from
+  // Prettier by design (see .prettierignore), so "aligned" tables would have to
+  // be re-padded by hand after every cell edit — a maintenance trap with no
+  // readability gain at the 120-char convention (MD013 exempts tables too).
+  "MD060": false,
+}

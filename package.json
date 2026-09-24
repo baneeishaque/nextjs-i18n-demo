@@ -1,0 +1,56 @@
+{
+  "name": "nextjs-i18n-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Industrial multilingual (i18n) showcase built with the Next.js App Router and next-intl: locale routing, RTL support, ICU formatting, SEO alternates, and a full unit + E2E test matrix.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "pretest:e2e": "next build",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "markdownlint": "markdownlint-cli2 \"**/*.md\"",
+    "markdownlint:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "next": "16.3.6",
+    "next-intl": "4.14.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/node": "26.6.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "@vitest/coverage-v8": "5.0.1",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.6",
+    "intl-messageformat": "11.2.15",
+    "jsdom": "30.1.1",
+    "markdownlint-cli2": "0.23.3",
+    "prettier": "3.9.9",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vitest": "5.0.1"
+  }
+}
