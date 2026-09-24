@@ -1,0 +1,92 @@
+{
+  "Metadata": {
+    "siteName": "Polyglot Starter",
+    "siteDescription": "An industrial multilingual Next.js demo: locale routing, RTL, ICU formatting, and SEO alternates.",
+    "home": {
+      "title": "Polyglot Starter — multilingual Next.js demo",
+      "description": "A production-shaped demo of multilingual support in Next.js: six locales, right-to-left Arabic, ICU message formatting, and hreflang-ready SEO."
+    },
+    "about": {
+      "title": "About the architecture",
+      "description": "How the multilingual demo is built: next-intl routing, edge locale detection, RTL support, ICU formatting, and an industrial test matrix."
+    }
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "skipToContent": "Skip to content"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "option": "Switch to {language}"
+  },
+  "HomePage": {
+    "heroTitle": "One codebase. Six languages. Zero layout forks.",
+    "heroSubtitle": "Locale-aware routing, right-to-left Arabic, ICU plurals, and hreflang-ready SEO — demonstrated with the Next.js App Router and next-intl.",
+    "primaryCta": "Explore the architecture",
+    "secondaryCta": "See the formatting demo",
+    "featuresTitle": "What this demo proves",
+    "features": {
+      "routing": {
+        "title": "Locale-aware routing",
+        "description": "Every page is served under an explicit locale prefix, with type-safe links that never lose the active language."
+      },
+      "rtl": {
+        "title": "RTL without forking",
+        "description": "Arabic flips the entire document with one dir attribute; layout utilities are logical, so no per-locale CSS exists."
+      },
+      "formatting": {
+        "title": "ICU formatting everywhere",
+        "description": "Dates, numbers, currencies, percentages, and plurals are rendered from the same catalogs on the server and in the browser."
+      },
+      "seo": {
+        "title": "SEO search engines understand",
+        "description": "Canonical URLs, hreflang alternates for all six locales, a locale-aware sitemap, and per-locale metadata."
+      }
+    },
+    "demoTitle": "Formatting that follows the locale",
+    "demoDescription": "The same values, rendered through the active locale's rules. Switch the language and watch every row change."
+  },
+  "FormattingDemo": {
+    "dateLabel": "Date",
+    "numberLabel": "Number",
+    "currencyLabel": "Currency",
+    "percentLabel": "Percentage",
+    "relativeTimeLabel": "Relative time",
+    "pluralLabel": "Pluralization",
+    "items": "{count, plural, =0 {No items in the cart} one {# item in the cart} other {# items in the cart}}",
+    "increment": "Add one item",
+    "decrement": "Remove one item",
+    "countDisplay": "Current count: {count}"
+  },
+  "AboutPage": {
+    "title": "About this demo",
+    "intro": "This page explains how the multilingual demo is assembled, which mechanisms it demonstrates, and which trade-offs were accepted.",
+    "stackTitle": "Stack",
+    "mechanismsTitle": "Mechanisms demonstrated",
+    "mechanisms": {
+      "routing": "Locale-prefixed routing with next-intl and the App Router, statically rendered per locale.",
+      "detection": "Edge middleware detects the visitor's language from a cookie or the Accept-Language header.",
+      "rtl": "Arabic switches the document to right-to-left; logical CSS properties mirror the layout automatically.",
+      "formatting": "Dates, numbers, currencies, and plurals flow through ICU message catalogs shared by server and client.",
+      "seo": "Canonical links, hreflang alternates, a localized sitemap, and per-locale metadata.",
+      "testing": "Unit tests with Vitest and Testing Library plus end-to-end browser tests with Playwright."
+    },
+    "tradeoffsTitle": "Trade-offs",
+    "tradeoffs": {
+      "prefix": "Always-prefixed URLs cost a redirect on first visit but keep one URL per language, which simplifies caching and SEO.",
+      "detection": "Automatic detection can guess wrong; the switcher and the preference cookie make the guess correctable in one click.",
+      "library": "next-intl couples the app to one library, but it is the de-facto standard for App Router i18n and avoids hand-rolled routing bugs."
+    },
+    "backHome": "Back to home"
+  },
+  "Footer": {
+    "builtWith": "Built with Next.js and next-intl",
+    "languageNote": "Every string on this page comes from a per-locale message catalog."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you requested does not exist in this language.",
+    "backHome": "Back to home"
+  }
+}
