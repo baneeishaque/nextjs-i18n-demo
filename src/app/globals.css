@@ -1,0 +1,46 @@
+/**
+ * Global stylesheet — Tailwind CSS v4 entry point.
+ *
+ * Tailwind v4 is configured in CSS: the `@theme` block below defines
+ * design tokens that become both CSS variables and utility classes.
+ * There is deliberately no `tailwind.config.js` in this project.
+ */
+
+@import "tailwindcss";
+
+@theme {
+  /**
+   * Font stack with explicit script fallbacks.
+   *
+   * Latin first, then per-script "Noto Sans" families. The OS supplies
+   * whichever family covers the active script (Devanagari for Hindi,
+   * Malayalam, Tamil, Kannada, Arabic), so Indic and RTL locales render
+   * with native-quality glyphs without shipping web fonts — which keeps
+   * the build network-free and the first paint fast.
+   */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", "Noto Sans Devanagari", "Noto Sans Malayalam", "Noto Sans Tamil",
+    "Noto Sans Kannada", "Noto Sans Arabic", sans-serif;
+}
+
+/**
+ * Base document styles.
+ *
+ * `antialiased` smooths glyphs on macOS; `bg-slate-50`/`text-slate-900`
+ * establish the light theme used across pages and screenshots.
+ */
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+/**
+ * Focus-visible ring for keyboard users.
+ *
+ * Applied globally instead of per-component so that the language
+ * switcher, navigation, and demo buttons all share one accessible focus
+ * treatment in both LTR and RTL directions.
+ */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-indigo-600;
+}
