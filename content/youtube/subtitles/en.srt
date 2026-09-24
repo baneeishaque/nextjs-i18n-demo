@@ -1,0 +1,31 @@
+1
+00:00:00,400 --> 00:00:11,951
+Every web product eventually needs more than one language. This is a Next.js demo that speaks six: English, Hindi, Malayalam, Tamil, Kannada, and Arabic. And it proves every claim with tests.
+
+2
+00:00:13,751 --> 00:00:25,486
+Every page lives under a locale prefix, so each language has exactly one URL. The edge detects the visitor's language from a cookie or the Accept-Language header, and every page is generated as static HTML.
+
+3
+00:00:27,286 --> 00:00:38,086
+Arabic flips the entire document with one direction attribute. Because the layout uses logical CSS properties, there is no per-language stylesheet. And the end-to-end tests assert that the layout really mirrors.
+
+4
+00:00:39,886 --> 00:00:49,729
+English has two plural forms. Arabic has six. The catalogs use ICU messages, and a test asks the platform which categories each language uses, so a wrong plural cannot ship.
+
+5
+00:00:51,529 --> 00:01:02,886
+Dates, numbers, currencies, and percentages follow the locale. Server and browser share one explicit time zone, so there are no hydration mismatches. Arabic even gets Eastern Arabic numerals.
+
+6
+00:01:04,686 --> 00:01:14,140
+Search engines need canonical URLs, hreflang alternates, and a sitemap. All three are computed by one module, so the page and the sitemap can never disagree.
+
+7
+00:01:15,940 --> 00:01:25,430
+Forty-five unit tests and twenty-one end-to-end tests run against a production build. One of them renders every page with JavaScript disabled, to prove the content is truly server-rendered.
+
+8
+00:01:27,230 --> 00:01:34,769
+The code, the architecture docs, and the line-by-line explainers are all public, under the MIT license. Link in the description.
